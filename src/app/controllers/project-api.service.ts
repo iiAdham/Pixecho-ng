@@ -8,6 +8,6 @@ import { projects } from '../modules/projects';
 })
 export class ProjectApiService extends ApiFunctionsService<projects> {
   constructor(public override http: HttpClient) {
-    super('https://iiadham-finalprojectapi.onrender.com/projects', http);
+    super('http://localhost:3000/projects', http);
   }
 }

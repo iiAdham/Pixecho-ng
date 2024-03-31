@@ -9,7 +9,7 @@ import { admins } from '../modules/admins';
 export class AdminApiService extends ApiFunctionsService<admins> {
 
   constructor(public override http: HttpClient) {
-    super('https://iiadham-finalprojectapi.onrender.com/admins', http);
+    super('http://localhost:3000/admins', http);
   }
 
 }

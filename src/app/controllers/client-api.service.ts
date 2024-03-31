@@ -8,6 +8,6 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ClientApiService extends ApiFunctionsService<clients>{
   constructor(public override http: HttpClient) {
-    super('https://iiadham-finalprojectapi.onrender.com/clients', http);
+    super('http://localhost:3000/clients', http);
   }
 }
