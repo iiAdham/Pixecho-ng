@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+<main id="main">
+  <!-- =================== Section 7 =================== -->
+  <section id="Customers" class="sec-7 py-5 mt-5">
+    <div class="container">
+      <div class="text-center">
+        <h2>MOST PROMINENT CLIENTS</h2>
+      </div>
+      <div class="row justify-content-center py-5">
+        <div
+          *ngFor="let Client of client"
+          class="img-1 col-lg-3 col-sm-6 text-center"
+        >
+          <a routerLink="/specWork/{{ Client.id }}"
+            ><img class="img-fluid" src="{{ Client.client_img }}"
+          /></a>
+        </div>
+      </div>
+      <div class="text-center mb-5">
+        <a routerLink="/work" class="myBtn">View all work</a>
+      </div>
+    </div>
+  </section>
+</main>
+<app-footer2></app-footer2>

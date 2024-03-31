@@ -1,0 +1,31 @@
+<app-navbar></app-navbar>
+<main id="main">
+  <!-- =================== Section 1 =================== -->
+  <section class="pt-5">
+    <div class="container">
+      <span class="myAlert" *ngIf="alert">Wrong email or password ,Please try again !
+      </span>
+      <div class="row justify-content-center mt-5">
+        <div class="text-center signin d-inline-block col-lg-6">
+          <form #form="ngForm" class="sign-in-info row justify-content-center">
+            <h2>SIGN IN</h2>
+            <div class="col-7 mb-3">
+              <input name="email" id="email" [(ngModel)]="admin.admin_email" #email="ngModel" type="text"
+                placeholder="Email">
+            </div>
+            <div class="col-7 mb-3">
+              <input name="password" id="password" [(ngModel)]="admin.admin_password" #password="ngModel"
+                type="password" placeholder="Password">
+            </div>
+            <div class="col-7 mt-3">
+              <button (click)="logIn()" class="myBtn">Sign in</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+<app-footer></app-footer>

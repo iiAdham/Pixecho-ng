@@ -1,0 +1,134 @@
+<!-- =================== Header =================== -->
+<header id="user-header" class="pt-2 pb-2 border-bottom fixed-top bg-body">
+  <nav class="navbar navbar-expand-lg text-center">
+    <div class="container">
+      <div class="brand-img">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/imgs/pixecho.png" alt="pixecho" />
+        </a>
+      </div>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              [class]="home ? 'active' : ''"
+              aria-current="page"
+              routerLink="/Home"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              [class]="about ? 'active' : ''"
+              routerLink="/about"
+              >About</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              [class]="services ? 'active' : ''"
+              routerLink="/services"
+              >Services</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              [class]="clients ? 'active' : ''"
+              routerLink="/clients"
+              >Our clients</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              [class]="work ? 'active' : ''"
+              routerLink="/work"
+              >Our work</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              [class]="contact ? 'active' : ''"
+              routerLink="/contact"
+              >Contact us</a
+            >
+          </li>
+          <li *ngIf="!loggedIn" class="nav-item mb-lg-0 mb-2">
+            <button routerLink="/login" class="nav-link loginBtn">Login</button>
+          </li>
+          <li
+            *ngIf="loggedIn"
+            class="row align-items-center justify-content-center ps-lg-3 p-0 m-lg-0 m-auto"
+          >
+            <div class="col-lg-6 p-0 mb-lg-0 mb-2 text-lg-start text-center">
+              <img
+                src="{{ admin.admin_img }}"
+                class="img-fluid"
+                style="
+                  width: 45px;
+                  height: 45px;
+                  background-color: gray;
+                  border-radius: 50%;
+                "
+                alt=""
+              />
+            </div>
+            <div class="col-lg-6 p-0">
+              <div class="dropdown">
+                <button
+                  class="myBtn px-2 py-1 fs-6 dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Account
+                </button>
+                <ul class="dropdown-menu">
+                  <li class="p-0 text-center">
+                    Welcome, {{ admin.admin_name }}
+                  </li>
+                  <li class="p-0 text-center">
+                    <a class="dropdown-item" routerLink="/admin/dashboard">
+                      Dashboard
+                    </a>
+                  </li>
+                  <li class="p-0 text-center">
+                    <a class="dropdown-item"
+                      ><button
+                        routerLink="/admin/dashboard"
+                        class="px-2 myBtn3 fs-6"
+                        (click)="logOut()"
+                      >
+                        Log out
+                      </button></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="d-inline-flex">
+          <span><i class="fa-solid fa-phone icon text-light"></i></span>
+          <span style="padding: 5px; cursor: pointer">+201096637388</span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

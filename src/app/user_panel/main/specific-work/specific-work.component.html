@@ -1,0 +1,45 @@
+<app-navbar></app-navbar>
+
+<main id="main">
+  <!-- =================== Main =================== -->
+  <main id="main">
+    <section class="sec pt-5">
+      <div class="container">
+        <div class="text-center">
+          <h2>OUR WORK</h2>
+        </div>
+        <div class="category">
+          <div class="text-center">
+            <span *ngIf="!hasProjects(client)" class="alert alert-info m-auto"
+              >Something wrong happened !</span
+            >
+          </div>
+          <div class="category-img">
+            <img src="{{ client.client_img }}" class="img-fluid" alt="arak" />
+          </div>
+          <div class="row justify-content-around">
+            <a
+              *ngFor="let elements of shownProjects"
+              routerLink="/work/{{ elements.id }}/{{ client.id }}/details"
+            >
+              <div class="project-card">
+                <div class="bg-body-tertiary text-center">
+                  <img
+                    class="img-fluid object-fit-contain"
+                    style="width: 200px; height: 200px"
+                    src="{{ elements.project_img }}"
+                  />
+                </div>
+                <p>{{ elements.project_name }}</p>
+                <p>{{ elements.project_date }}</p>
+                <p class="text-center">Preview</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</main>
+
+<app-footer></app-footer>

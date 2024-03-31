@@ -1,0 +1,54 @@
+<admin-navbar></admin-navbar>
+<main id="main">
+  <section class="sec">
+    <div class="container">
+      <span class="myAlert" *ngIf="alert"
+        >Data has been saved successfully !
+      </span>
+
+      <div class="clients">
+        <div class="text-md-start text-center">
+          <h1 class="client-list-h1">Clients List</h1>
+        </div>
+        <div class="row justify-content-around">
+          <div class="client-main" *ngFor="let Client of client">
+            <div class="client-card">
+              <div class="bg-body-tertiary text-center first-div">
+                <img
+                  class="img-fluid object-fit-contain"
+                  src="{{ Client.client_img }}"
+                  alt=""
+                />
+              </div>
+              <div
+                class="row mb-2 justify-content-between align-items-center text-lg-start text-center"
+              >
+                <span
+                  style="color: #dcf2f1; font-family: main-font"
+                  class="fs-3 col-lg-6"
+                  >{{ Client.client_name }}</span
+                >
+                <button
+                  routerLink="/admin/clients/edit/{{ Client.id }}"
+                  class="myBtn4 mt-1 col-lg-3"
+                >
+                  Edit
+                </button>
+                <button
+                  data-bs-toggle="modal"
+                  data-bs-target="#staticBackdrop"
+                  data-backdrop="false"
+                  class="myBtn3 mt-1 col-lg-3"
+                  (click)="remove(Client.id)"
+                >
+                  Delete
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<admin-footer></admin-footer>

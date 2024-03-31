@@ -1,0 +1,33 @@
+.drop-down {
+  position: relative;
+}
+
+.drop-down-items {
+  position: absolute;
+  background-color: var(--main-color);
+  margin-top: 15px;
+  width: 100%;
+  border-radius: 6px 0 6px 0;
+  display: none;
+}
+
+.drop-down-items ul {
+  padding: 0;
+}
+
+.drop-down-items ul li {
+  padding: 5px;
+}
+
+.drop-down-items ul li a {
+  color: white !important;
+  padding: 5px;
+}
+
+.drop-down-items ul li a::after {
+  background-color: white !important;
+}
+
+.drop-down-items.active {
+  display: block;
+}

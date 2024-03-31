@@ -1,0 +1,84 @@
+<admin-navbar></admin-navbar>
+<main id="main" class="add_admin">
+  <section class="sec-1">
+    <div class="mb-5 pb-5"></div>
+    <span class="myAlert" *ngIf="alert"
+      >Data has been saved successfully !
+    </span>
+    <div class="container">
+      <div class="clients text-md-start text-center">
+        <h2>ADD NEW ADMIN</h2>
+        <form class="row justify-content-around" #form="ngForm">
+          <div class="col-md-6 mb-3">
+            <input
+              name="name"
+              id="name"
+              type="text"
+              [(ngModel)]="admin.admin_name"
+              placeholder="Name"
+              required
+              #name="ngModel"
+            />
+            <span class="text-danger" *ngIf="name.touched && name.invalid"
+              >*This field is required</span
+            >
+          </div>
+          <div class="col-md-6 mb-3">
+            <input
+              name="Email"
+              id="email"
+              type="text"
+              [(ngModel)]="admin.admin_email"
+              placeholder="Email"
+              required
+              #email="ngModel"
+            />
+            <span class="text-danger" *ngIf="email.touched && email.invalid"
+              >*This field is required</span
+            >
+          </div>
+          <div class="col-md-6 mb-3">
+            <input
+              name="img"
+              id="img"
+              type="text"
+              [(ngModel)]="admin.admin_img"
+              placeholder="Image URL"
+              required
+              #img="ngModel"
+            />
+            <span class="text-danger" *ngIf="img.touched && img.invalid"
+              >*This field is required</span
+            >
+          </div>
+          <div class="col-md-6 mb-3">
+            <input
+              name="password"
+              id="password"
+              type="password"
+              [(ngModel)]="admin.admin_password"
+              placeholder="Password"
+              required
+              #password="ngModel"
+            />
+            <span
+              class="text-danger"
+              *ngIf="password.touched && password.invalid"
+              >*This field is required</span
+            >
+          </div>
+          <div class="col-12 text-center">
+            <button
+              (click)="addAdmin()"
+              [disabled]="alert || form.invalid"
+              class="myBtn"
+            >
+              ADD ADMIN
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <admin-footer></admin-footer>
+  </section>
+</main>

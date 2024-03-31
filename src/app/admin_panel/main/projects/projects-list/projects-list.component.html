@@ -1,0 +1,57 @@
+<admin-navbar></admin-navbar>
+<!-- =================== Main =================== -->
+<main id="main">
+  <section class="sec">
+    <div class="container">
+      <span class="myAlert" *ngIf="alert"
+        >Data has been saved successfully !
+      </span>
+      <div class="text-center">
+        <h2>OUR WORK</h2>
+      </div>
+      <div class="category" *ngFor="let client of allClients">
+        <ng-container *ngIf="hasProjects(client)">
+          <div class="category-img">
+            <img
+              *ngIf="hasProjects(client)"
+              src="{{ client.client_img }}"
+              class="img-fluid"
+              alt="arak"
+            />
+          </div>
+          <div class="row justify-content-around pt-5">
+            <a *ngFor="let project of getProjects(client)" class="project-card">
+              <div class="bg-body-tertiary text-center">
+                <img
+                  class="img-fluid object-fit-contain"
+                  style="width: 200px; height: 200px"
+                  src="{{ project.project_img }}"
+                />
+              </div>
+              <div
+                class="row mb-2 justify-content-between align-items-center text-lg-start text-center"
+              >
+                <span style="color: #dcf2f1" class="col-lg-6">{{
+                  project.project_name
+                }}</span>
+                <button
+                  routerLink="/admin/projects/edit/{{ project.id }}"
+                  class="myBtn4 col-lg-3 col-5 m-auto"
+                >
+                  Edit
+                </button>
+                <button
+                  (click)="remove(project.id)"
+                  class="myBtn3 col-lg-3 col-5 m-auto"
+                >
+                  Delete
+                </button>
+              </div>
+            </a>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </section>
+</main>
+<admin-footer></admin-footer>

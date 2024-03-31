@@ -1,0 +1,59 @@
+<admin-navbar></admin-navbar>
+<main id="main" class="messages">
+  <section class="sec-1">
+    <div class="container">
+      <span *ngIf="alert" class="myAlert"
+        >Message has been deleted successfully !</span
+      >
+      <div class="contacts">
+        <div class="text-md-start text-center">
+          <h1 class="client-list-h1">Messages</h1>
+        </div>
+        <div class="row justify-content-between">
+          <div
+            *ngFor="let Contact of contact"
+            class="message-card row col-lg-6 mb-2"
+          >
+            <div class="col-4">
+              <ul>
+                <li><p>ID</p></li>
+                <li><p>Full name</p></li>
+                <li><p>Email</p></li>
+                <li><p>Phone number</p></li>
+                <li><p>Service</p></li>
+              </ul>
+            </div>
+            <div class="col-8">
+              <ul>
+                <li>
+                  <p>{{ Contact.id }}</p>
+                </li>
+                <li>
+                  <p>{{ Contact.full_name }}</p>
+                </li>
+                <li>
+                  <p>{{ Contact.email }}</p>
+                </li>
+                <li>
+                  <p>{{ Contact.phone_number }}</p>
+                </li>
+                <li>
+                  <p>{{ Contact.service }}</p>
+                </li>
+              </ul>
+            </div>
+            <div class="text-center">
+              <button (click)="viewMsg(Contact.id)" class="myBtn4">
+                View message
+              </button>
+              <button (click)="remove(Contact.id)" class="myBtn3 ms-2">
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<admin-footer></admin-footer>

@@ -1,0 +1,29 @@
+<admin-navbar></admin-navbar>
+<main id="main" class="admins-list">
+  <section class="sec-1">
+    <div class="mb-5 pb-5"></div>
+    <span class="myAlert" *ngIf="alert"
+      >Data has been deleted successfully !
+    </span>
+    <div class="container">
+      <div class="clients text-md-start text-center">
+        <h2>ADMINS LIST</h2>
+        <div class="row justify-content-around align-items-center">
+          <div *ngFor="let admiN of admin" class="card-item">
+            <div class="cards text-center">
+              <div class="m-auto">
+                <img class="img-fluid admin-img" src="{{ admiN.admin_img }}" />
+              </div>
+              <p class="mt-4">{{ admiN.admin_name }}</p>
+              <a routerLink="/admin/edit/{{ admiN.id }}" class="myBtn4 me-1"
+                >EDIT</a
+              >
+              <a (click)="delete(admiN.id)" class="myBtn3 me-1">DELETE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<admin-footer></admin-footer>

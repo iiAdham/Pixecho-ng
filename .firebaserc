@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "pixechoapp"
+  },
+  "targets": {
+    "pixechoapp": {
+      "hosting": {
+        "Pixecho": [
+          "pixechoapp"
+        ]
+      }
+    }
+  }
+}

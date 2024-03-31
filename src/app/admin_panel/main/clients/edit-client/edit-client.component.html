@@ -1,0 +1,55 @@
+<admin-navbar></admin-navbar>
+<main id="main" class="edit_client">
+  <section class="sec-1">
+    <div class="mb-5 pb-5"></div>
+    <span class="myAlert" *ngIf="alert"
+      >Data has been saved successfully !
+    </span>
+    <div class="container">
+      <div class="clients text-md-start text-center">
+        <h2>Edit CLIENT</h2>
+        <form #form="ngForm" class="row">
+          <div class="col-md-6 mb-3">
+            <input
+              name="name"
+              id="name"
+              [(ngModel)]="client.client_name"
+              #name="ngModel"
+              type="text"
+              placeholder="Client's Name"
+              required
+            />
+            <span class="text-danger" *ngIf="name.touched && name.invalid"
+              >*This field is required</span
+            >
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <input
+              name="img"
+              id="img"
+              [(ngModel)]="client.client_img"
+              #img="ngModel"
+              type="text"
+              placeholder="Client's image URL"
+              required
+            />
+            <span class="text-danger" *ngIf="img.touched && img.invalid"
+              >*This field is required</span
+            >
+          </div>
+          <div class="col-12 text-center">
+            <button
+              (click)="edit(client.id)"
+              [disabled]="alert || form.invalid"
+              class="myBtn"
+            >
+              UPDATE
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <admin-footer></admin-footer>
+  </section>
+</main>

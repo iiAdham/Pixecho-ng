@@ -1,0 +1,176 @@
+<admin-navbar></admin-navbar>
+<main id="main" class="add-project">
+  <section class="sec-1">
+    <div class="mb-5 pb-5"></div>
+    <span class="myAlert" *ngIf="alert"
+      >Data has been saved successfully !
+    </span>
+    <div class="container">
+      <div class="clients text-md-start text-center">
+        <h2>ADD NEW PROJECT</h2>
+        <form #form="ngForm" class="row justify-content-around">
+          <div class="col-md-6 mb-3">
+            <select
+              required
+              [(ngModel)]="project.client_name"
+              name="client"
+              id="client"
+              #client="ngModel"
+            >
+              <option selected disabled>Select client name</option>
+              <option
+                *ngFor="let client of Clients"
+                value="{{ client.client_name }}"
+              >
+                {{ client.client_name }}
+              </option>
+            </select>
+            <span class="text-danger" *ngIf="client.touched && client.invalid"
+              >*This field is required</span
+            >
+          </div>
+          <div class="col-md-6 mb-3">
+            <input
+              name="name"
+              id="name"
+              [(ngModel)]="project.project_name"
+              #name="ngModel"
+              type="text"
+              placeholder="Project title"
+              required
+            />
+            <span class="text-danger" *ngIf="name.touched && name.invalid"
+              >*This field is required</span
+            >
+          </div>
+          <div class="col-md-6 mb-3">
+            <input
+              name="date"
+              id="date"
+              [(ngModel)]="project.project_date"
+              #date="ngModel"
+              type="text"
+              placeholder="Project date"
+              required
+            />
+            <span class="text-danger" *ngIf="date.touched && date.invalid"
+              >*This field is required</span
+            >
+          </div>
+          <div class="col-md-6 mb-3">
+            <input
+              name="img"
+              id="img"
+              [(ngModel)]="project.project_img"
+              #img="ngModel"
+              type="text"
+              placeholder="Project image URL"
+              required
+            />
+            <span class="text-danger" *ngIf="img.touched && img.invalid"
+              >*This field is required</span
+            >
+          </div>
+          <div class="col-md-6 mb-3">
+            <input
+              name="category"
+              id="category"
+              [(ngModel)]="project.project_category"
+              #category="ngModel"
+              type="text"
+              placeholder="Category"
+              required
+            />
+            <span
+              class="text-danger"
+              *ngIf="category.touched && category.invalid"
+              >*This field is required</span
+            >
+          </div>
+          <div class="col-md-6 mb-3">
+            <input
+              name="team"
+              id="team"
+              [(ngModel)]="project.team"
+              #team="ngModel"
+              type="text"
+              placeholder="Team"
+              required
+            />
+            <span class="text-danger" *ngIf="team.touched && team.invalid"
+              >*This field is required</span
+            >
+          </div>
+          <div class="col-md-6 mb-3">
+            <input
+              name="facebook"
+              id="facebook"
+              [(ngModel)]="project.project_facebook"
+              #facebook="ngModel"
+              type="text"
+              placeholder="Facebook link (Optional)"
+            />
+          </div>
+          <div class="col-md-6 mb-3">
+            <input
+              name="twitter"
+              id="twitter"
+              [(ngModel)]="project.project_twitter"
+              #twitter="ngModel"
+              type="text"
+              placeholder="Twitter link (Optional)"
+            />
+          </div>
+          <div class="col-md-6 mb-3">
+            <input
+              name="instagram"
+              id="instagram"
+              [(ngModel)]="project.project_instagram"
+              #instagram="ngModel"
+              type="text"
+              placeholder="Instagram link (Optional)"
+            />
+          </div>
+          <div class="col-md-6 mb-3">
+            <input
+              name="viewBtn"
+              id="viewBtn"
+              [(ngModel)]="project.project_viewUrl"
+              #instagram="ngModel"
+              type="text"
+              placeholder="View project button URL (Optional)"
+            />
+          </div>
+          <div class="col-md-12 mb-3">
+            <textarea
+              name="description"
+              id="description"
+              [(ngModel)]="project.project_description"
+              #description="ngModel"
+              cols="40"
+              rows="10"
+              type="text"
+              placeholder="Project description"
+              required
+            ></textarea>
+            <span
+              class="text-danger"
+              *ngIf="description.touched && description.invalid"
+              >*This field is required</span
+            >
+          </div>
+          <div class="col-12 text-center">
+            <button
+              (click)="addProject()"
+              [disabled]="alert || form.invalid"
+              class="myBtn"
+            >
+              ADD PROJECT
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <admin-footer></admin-footer>
+  </section>
+</main>

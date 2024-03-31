@@ -1,0 +1,149 @@
+<!-- =================== Header =================== -->
+<header id="admin-header">
+  <nav class="navbar fixed-top">
+    <div class="container-fluid">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="offcanvas offcanvas-start"
+        tabindex="-1"
+        id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel"
+      >
+        <div class="offcanvas-header">
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul
+            class="navbar-nav justify-content-end flex-grow-1 pe-3 align-items-center text-center"
+          >
+            <div class="">
+              <img
+                class="admin-img img-fluid"
+                src="{{ admin.admin_img }}"
+                alt=""
+              />
+            </div>
+            <p>{{ admin.admin_name }}</p>
+            <button (click)="logOut()" class="myBtn3">Log out</button>
+          </ul>
+          <ul
+            class="navbar-nav justify-content-end d-block pe-3 align-items-start"
+          >
+            <div
+              class="accordion accordion-flush mt-5"
+              id="accordionFlushExample"
+            >
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseThree"
+                  >
+                    <a class="nav-link">Admin</a>
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseThree"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <div class="text-start mb-2 px-3 accordion-links">
+                      <a routerLink="/admin/dashboard">Dashboard</a>
+                    </div>
+                    <div class="text-start mb-2 px-3 accordion-links">
+                      <a routerLink="/admin/add">Add Admin</a>
+                    </div>
+                    <div class="text-start mb-2 px-3 accordion-links">
+                      <a routerLink="/admin/list">Admins List</a>
+                    </div>
+                    <div class="text-start mb-2 px-3 accordion-links">
+                      <a routerLink="/admin/contacts/list">Messages</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseOne"
+                  >
+                    <a class="nav-link">Clients</a>
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseOne"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <div class="text-start mb-2 px-3 accordion-links">
+                      <a routerLink="/admin/clients/add">Add Client</a>
+                    </div>
+                    <div class="text-start mb-2 px-3 accordion-links">
+                      <a routerLink="/admin/clients/list">Clients List</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwo"
+                  >
+                    <a class="nav-link">Projects</a>
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseTwo"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <div class="text-start mb-2 px-3 accordion-links">
+                      <a routerLink="/admin/projects/add">Add Project</a>
+                    </div>
+                    <div class="text-start mb-2 px-3 accordion-links">
+                      <a routerLink="/admin/projects/list">Projects List</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ul>
+          <div class="logo">
+            <img class="img-fluid" src="../assets/imgs/pixecho.png" alt="#" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

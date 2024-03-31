@@ -1,0 +1,29 @@
+<admin-navbar></admin-navbar>
+<!-- =================== Dashboard =================== -->
+<main id="main" class="dashboard">
+  <section class="sec-1">
+    <div class="container">
+      <div class="mt-5 text-center dashboard-h1">
+        <h1>WELCOME, {{ admin.admin_name }}</h1>
+      </div>
+      <div class="dashboard pt-5">
+        <h2>DASHBOARD</h2>
+        <div class="row justify-content-around">
+          <div class="cards col-md-3 text-center mb-3">
+            <h6>Clients</h6>
+            <p class="fs-5 text-success fw-bold">{{ clientCounter }}</p>
+          </div>
+          <div class="cards col-md-3 text-center mb-3">
+            <h6>Projects</h6>
+            <p class="fs-5 text-success fw-bold">{{ projectCounter }}</p>
+          </div>
+          <div class="cards col-md-3 text-center mb-3">
+            <h6>Admins</h6>
+            <p class="fs-5 text-success fw-bold">{{ adminCounter }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <admin-footer></admin-footer>
+  </section>
+</main>

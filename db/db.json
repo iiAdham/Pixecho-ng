@@ -1,0 +1,82 @@
+{
+  "admins": [
+    {
+      "id": 1,
+      "admin_name": "admin",
+      "admin_email": "admin@admin.com",
+      "admin_password": "admin",
+      "admin_img": "https://www.shutterstock.com/image-vector/user-icon-vector-600nw-393536320.jpg"
+    },
+    {
+      "id": 2,
+      "admin_name": "Adham M. Farouk",
+      "admin_email": "adham@admin.com",
+      "admin_password": "admin",
+      "admin_img": "https://scontent.fcai20-4.fna.fbcdn.net/v/t39.30808-6/415913802_1832355107183942_7526881053811667416_n.jpg?stp=cp6_dst-jpg&_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_ohc=QaGtckLWaw0AX_jmc7A&_nc_ht=scontent.fcai20-4.fna&oh=00_AfAwiuzNNENSFmWetOuuYe7cC6iuiD27jHISVrfG0nXR-Q&oe=660DD66A"
+    },
+    {
+      "admin_email": "ahmed@admin.com",
+      "admin_password": "admin",
+      "admin_name": "Ahmed",
+      "admin_img": "https://www.arabnews.com/sites/default/files/styles/n_670_395/public/2021/06/08/2655556-381657911.jpg?itok=8mfcBQBZ",
+      "id": 3
+    }
+  ],
+  "clients": [
+    {
+      "client_name": "Edita",
+      "client_img": "assets/imgs/edita.png",
+      "id": 1
+    },
+    {
+      "client_name": "Arak",
+      "client_img": "assets/imgs/arak.png",
+      "id": 2
+    },
+    {
+      "client_name": "BMW",
+      "client_img": "https://1000logos.net/wp-content/uploads/2018/02/BMW-Logo-1963.png",
+      "id": 3
+    }
+  ],
+  "projects": [
+    {
+      "client_name": "Arak",
+      "project_name": "Digital marketing strategy",
+      "project_date": "20 March, 2024",
+      "project_img": "https://intellipaat.com/blog/wp-content/uploads/2021/10/Digital-Marketing-Project-ideas.png",
+      "project_category": "Digital marketing",
+      "team": "Adham, Mahmoud, Mohamed and Jana",
+      "project_facebook": "https://www.facebook.com/iiAdhaaam/",
+      "project_twitter": "https://www.facebook.com/iiAdhaaam/",
+      "project_instagram": "https://www.facebook.com/iiAdhaaam/",
+      "project_viewUrl": "https://www.facebook.com/iiAdhaaam/",
+      "project_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis cupiditate temporibus laborum ea sapiente maiores, minima dolorum distinctio corporis, eaque placeat, aspernatur expedita omnis eveniet facilis pariatur rem animi amet. Ipsa odio omnis natus sunt quidem vitae nobis quibusdam eos est autem molestias, voluptatum alias? Nihil omnis obcaecati minus porro officia ad inventore iusto libero ducimus commodi numquam odio vero est architecto, amet aliquam consequatur eius laborum sequi voluptate enim nostrum, animi fugiat. Voluptates consectetur mollitia, ducimus tempore ut perspiciatis quis magni rem accusantium consequuntur quae animi atque vitae dolores soluta numquam tempora omnis, laborum similique cum, beatae fuga dolor quidem recusandae. Temporibus esse sunt molestias expedita dolor omnis iure quidem! Ea obcaecati quibusdam facilis aliquid, quia blanditiis voluptatum inventore praesentium laboriosam dolores reiciendis error laborum eos, corporis nisi veritatis pariatur dolorum fuga asperiores doloribus? Vitae, maiores. Eius, tempora facilis. Doloremque excepturi, deserunt voluptatem omnis, rerum ipsum possimus maiores facilis modi amet beatae sequi explicabo nam? Totam omnis nobis quam doloremque, suscipit dolores pariatur reiciendis excepturi, quia facilis tempora. Voluptatibus ad consequatur dolorum fuga id accusantium voluptate, tempore magnam provident omnis facere minus. Perspiciatis earum quo incidunt eaque aspernatur similique, odit, impedit, suscipit sed hic ratione eos alias sapiente saepe.\n",
+      "id": 1
+    },
+    {
+      "project_img": "https://hips.hearstapps.com/hmg-prod/images/2024-bmw-m5-sedan-rendering-1676575610.jpg",
+      "project_facebook": "https://hips.hearstapps.com/hmg-prod/images/2024-bmw-m5-sedan-rendering-1676575610.jpg",
+      "project_twitter": "https://hips.hearstapps.com/hmg-prod/images/2024-bmw-m5-sedan-rendering-1676575610.jpg",
+      "project_instagram": "https://hips.hearstapps.com/hmg-prod/images/2024-bmw-m5-sedan-rendering-1676575610.jpg",
+      "project_viewUrl": "https://hips.hearstapps.com/hmg-prod/images/2024-bmw-m5-sedan-rendering-1676575610.jpg",
+      "client_name": "BMW",
+      "project_name": "BMW M5 2020",
+      "project_date": "12 May, 2020",
+      "project_category": "Cars",
+      "team": "Adham , Mohamed , BMW",
+      "project_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos voluptatem tempore, non sed atque, inventore cum ullam, aliquam at totam odio perferendis aperiam aspernatur quis hic temporibus iusto facilis ipsam eos error voluptates vel nobis eius. Minima vel natus ullam tempora maiores et assumenda facilis provident? Reiciendis repudiandae, voluptas sit accusamus voluptate velit? Hic eos nesciunt, exercitationem facere quo doloribus reiciendis aliquid unde corporis, doloremque necessitatibus odit quasi in sed voluptas nostrum officia similique sit maxime corrupti! Facere, quisquam possimus. Fuga excepturi, a provident autem qui eligendi, odit perferendis earum, hic nulla eveniet non laudantium. Praesentium mollitia et neque, voluptas eius nobis! Quia, enim neque ipsum aspernatur distinctio recusandae possimus perferendis est ratione aliquam aut porro et cumque autem modi temporibus ducimus assumenda esse? Qui similique obcaecati provident corporis repudiandae quae cumque ex adipisci, saepe tenetur ut! Nesciunt, omnis odit! Culpa quibusdam aspernatur commodi illum eligendi magni eaque alias. Voluptatum ipsum, veritatis cum placeat nisi, fugit repellendus at accusantium earum a, ipsam ex enim? Voluptatibus iste eos asperiores doloremque dolorem aspernatur illo officiis perferendis expedita dolores. Iure autem nulla itaque quod minus! Mollitia magni quis voluptatibus modi repellat iure ratione ipsa. Ad, laborum. Officia atque, iste ab aliquid quas porro delectus voluptas ex quasi facilis rerum autem magni vel placeat eveniet eius aut reiciendis suscipit explicabo adipisci iusto optio? Numquam quo voluptatem totam officiis! Totam, voluptas. Provident numquam harum ex pariatur maiores natus. Aspernatur aliquid qui a voluptatem repudiandae ad cupiditate consectetur maxime odit tenetur enim tempora illo repellendus nemo ullam suscipit at sequi dolor, fugit facere. Fugit optio neque illum, illo totam veniam ullam quo nemo consequatur. Consequatur ea provident culpa nostrum? Reiciendis, labore voluptatem. Perferendis consequuntur delectus natus impedit nesciunt aspernatur iure unde fugit odit, eligendi et incidunt blanditiis nobis, necessitatibus doloremque labore officia id deleniti earum fuga.\n",
+      "id": 2
+    }
+  ],
+  "contacts": [
+    {
+      "full_name": "Arak",
+      "email": "arak@info.com",
+      "phone_number": "+201096637388",
+      "service": "Marketing",
+      "message": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit perspiciatis, mollitia minima eos numquam quod maxime quibusdam expedita, ad nulla possimus, sapiente autem laborum dolorem magnam tenetur culpa alias molestias.",
+      "id": 1
+    }
+  ]
+}

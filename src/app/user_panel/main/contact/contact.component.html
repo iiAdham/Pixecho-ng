@@ -1,0 +1,105 @@
+<app-navbar></app-navbar>
+
+<main id="main">
+  <!-- =================== Section 8 =================== -->
+  <section id="Contact" class="sec-8 pt-5 mt-5">
+    <div class="container">
+      <span *ngIf="alert" class="myAlert"
+        >Message has been sent successfully !</span
+      >
+
+      <div class="text-center mb-5">
+        <h2>Contact Us</h2>
+      </div>
+      <form #myForm="ngForm" class="row g-1">
+        <div class="col-md-6">
+          <input
+            class=""
+            name="name"
+            id="name"
+            [(ngModel)]="contact.full_name"
+            type="text"
+            placeholder="Full Name"
+            required
+            #name="ngModel"
+          />
+          <span class="text-danger" *ngIf="name.touched && name.invalid"
+            >*This field is required</span
+          >
+        </div>
+        <div class="col-md-6">
+          <input
+            class=""
+            name="email"
+            id="email"
+            [(ngModel)]="contact.email"
+            type="email"
+            placeholder="Email"
+            required
+            #email="ngModel"
+          />
+          <span class="text-danger" *ngIf="email.touched && email.invalid"
+            >*This field is required</span
+          >
+        </div>
+        <div class="col-md-6">
+          <input
+            class=""
+            name="phone"
+            id="phone"
+            [(ngModel)]="contact.phone_number"
+            type="phone"
+            placeholder="Phone Number"
+            required
+            #phone="ngModel"
+          />
+          <span class="text-danger" *ngIf="phone.touched && phone.invalid"
+            >*This field is required</span
+          >
+        </div>
+        <div class="col-md-6">
+          <input
+            class=""
+            name="service"
+            id="service"
+            [(ngModel)]="contact.service"
+            type="text"
+            placeholder="Choose a service"
+            required
+            #service="ngModel"
+          />
+          <span class="text-danger" *ngIf="service.touched && service.invalid"
+            >*This field is required</span
+          >
+        </div>
+        <div class="col-12">
+          <textarea
+            placeholder="Write your message"
+            name="message"
+            id="message"
+            [(ngModel)]="contact.message"
+            cols="40"
+            rows="10"
+            id="textarea"
+            required
+            #message="ngModel"
+          ></textarea>
+          <span class="text-danger" *ngIf="message.touched && message.invalid"
+            >*This field is required</span
+          >
+        </div>
+        <div class="col-12 text-md-start text-center">
+          <button
+            [disabled]="alert || myForm.invalid"
+            (click)="sendMsg()"
+            class="btn myBtn my-3"
+          >
+            Send Message
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<app-footer2></app-footer2>
